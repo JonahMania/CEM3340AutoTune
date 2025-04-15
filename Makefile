@@ -1,13 +1,13 @@
 NAME=autoTune
 
-SRC=main.c MCP42.c
+SRC=main.cpp mcp42.cpp
 
 SRCPATH=./
 OBJ=$(addprefix $(SRCPATH), $(SRC:.c=.o))
 
-MODEL=attiny84
-CC=avr-gcc
-CFLAGS=-g -std=c11 -Os -mmcu=$(MODEL)
+MODEL=attiny85
+CC=avr-g++
+CFLAGS=-g -std=c++14 -Os -mmcu=$(MODEL)
 LINKFLAGS=-g -mmcu=$(MODEL)
 
 RM=rm -f
